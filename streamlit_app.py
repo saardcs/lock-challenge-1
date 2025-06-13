@@ -27,12 +27,12 @@ def lock_simulation():
 
 # Sidebar QR code section
 st.sidebar.header("Scan This QR Code to View Menu Online")
-qr_link = "https://your-app-url.com"  # Replace with your actual URL
+qr_link = "https://lock-challenge.streamlit.app/"  # Replace with your actual URL
 qr = qrcode.make(qr_link)
 buf = io.BytesIO()
 qr.save(buf)
 buf.seek(0)
-st.sidebar.image(buf, width=200, caption=qr_link)
+st.sidebar.image(buf, width=300, caption=qr_link)
 
 # Run the lock simulation
 lock_simulation()
